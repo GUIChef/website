@@ -10,8 +10,13 @@
     <hr>
     <h3>Wow! You're lucky.</h3>
     <p>
-      Only one in a hundred make it to this page. Here's your prize:
-      <button onclick="collectPotato()"><img src="images/potato.png"></button>
+      Only one in a hundred make it to this page. Here's your prize:<br>
+      <button class=cleanClick onclick="collectPotato()"><img src="images/potato.png"></button>
     </p>
+    <script>
+      function collectPotato(){
+        sessionStorage.setItem("hasPotato", "true"); //This gives the user a potato
+      }
+    </script>
   </body>
 </html>
