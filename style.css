@@ -2,7 +2,10 @@
   font-family: monospace;  
 }
 
-.hiddenLink{
-  color: black;
-  text-decoration: none;
+.hiddenLink,
+.hiddenLink:visited,
+.hiddenLink:hover,
+.hiddenLink:active {
+    text-decoration: none;
+    color: inherit;
 }
