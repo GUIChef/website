@@ -142,7 +142,7 @@
         function scramble(){
           let funny = Math.floor(Math.random()*3+1); //This decides if the link goes to the secret page. ps change 3 to 100
           if (funny=1) {
-            document.getElementById("funnyLink").href=pagePotato.html; //This changes the "link" to lead to the secret page.
+            document.getElementById("funnyLink").href="pagePotato.html"; //This changes the "link" to lead to the secret page.
           } else {
             let random = Math.floor(Math.random()*100); //This chooses a link to modify.
             let links = document.getElementsByClassName("link"); //This gets an array of all links.
