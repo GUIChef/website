@@ -13,3 +13,9 @@
 .white{
   color: white;
 }
+
+.cleanClick {
+    background: none;
+    border: none;
+    padding: 0;
+}
