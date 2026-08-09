@@ -130,16 +130,9 @@
       <a class="link" href="https://guichef.github.io/website" title="Not me ;)">link</a> 
       <a class="link" href="https://guichef.github.io/website" title="Not me ;)">link</a> 
       <a class="link" href="https://guichef.github.io/website" title="Not me ;)">link</a>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <button onclick="scramble()"> test </button> <!-- remove later -->
       <script>
         function scramble(){
-          let funny = Math.floor(Math.random()*3+1); //This decides if the link goes to the secret page. ps change 3 to 100
+          let funny = Math.floor(Math.random()*100+1); //This decides if the link goes to the secret page.
           if (funny==1) {
             document.getElementById("funnyLink").href="pagePotato.html"; //This changes the "link" to lead to the secret page.
           } else {
