@@ -14,6 +14,15 @@
       Did you know there's a second page?<br>
       It's hidden <a href="page2.html" title="Not really lol." class="hiddenLink">somewhere</a>.
     </p>
-    <img src="images/microwave.png" alt="This is a microwave." title="This is a microwave.">
+    <button onclick="microwave()">
+      <img id="microwave" src="images/microwave.png" alt="This is a microwave." title="This is a microwave.">
+    </button>
+    <script>
+      function microwave(){
+        document.getElementById("microwave").src="images/microwaveOpen.png"
+        document.getElementById("microwave").title="This is an open microwave."
+        document.getElementById("microwave").alt="This is an open microwave."
+      }
+    </script>
   </body>
 </html>
