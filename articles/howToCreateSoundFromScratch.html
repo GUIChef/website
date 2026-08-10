@@ -4,6 +4,18 @@
   <head>
     <title>How to Create Sound from Scratch</title>
     <link rel="stylesheet" href="style.css">
+    <!--vvvThis loads LaTex for equation display vvv-->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: {'[+]': [['$', '$']]}
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+      </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
   </head>
   <body>
     <h1>Welcome to my Website!</h1>
@@ -32,26 +44,28 @@
     <br>
     <h4>Step 1</h4>
     <p>
-      Coppy and paste this text into your notepad file:
+      Coppy and paste this text into your notepad file:<br>
       52 49 46 46
       ?? ?? ?? ??
       57 41 56 45
-
+      
       66 6D 74 20
       10 00 00 00
       01 00
       01 00
-      XX XX XX XX
-      ZZ ZZ ZZ ZZ
-      YY YY
+      40 1F 00 00
+      40 1F 00 00
+      01 00
       08 00
-
+      
       64 61 74 61
-      ?? ?? ?? ??
+      ?? ?? ?? ??<br>
+      This is the headder for a .wav file with 8 bit resolution and 8kHz sample frequency.
     </p>
     <h4>Step 2</h4>
     <p>
-      Decide your bitrate and
+      Next, you will need to create your waveform. Use Desmos to visualize your sound wave. The waveform I chose was this:<br>
+      $$$f\left(x\right)=127.5\sin\left(\frac{2a\pi}{8000}x\right)+127.5$$
     </p>
     <h4>Step 2</h4>
     <p>
