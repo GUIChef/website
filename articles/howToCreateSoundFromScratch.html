@@ -65,25 +65,28 @@
     <h4>Step 2</h4>
     <p>
       Next, you will need to create your waveform. Use Desmos to visualize your sound wave. The waveform I chose was this:<br>
-      $$$f\left(x\right)=127.5\sin\left(\frac{2a\pi}{8000}x\right)+127.5$$
+      $$f\left(x\right)=127.5\sin\left(\frac{2a\pi}{8000}x\right)+127.5$$<br> Where a is the frequency in Hz.
     </p>
-    <h4>Step 2</h4>
+    <h4>Step 3</h4>
     <p>
-      
+      Now you will need to open your excel file and, in column A, create a set of numbers from 1 to however many samples you will be using. You can use the equation "=A1+1" in cell A2 and extend. In column B, write your equation and extend. For me, I put in cell B2 "127.5*SIN((2*440*PI()/8000)*A1)+127.5". In column C, round everything to whole numbers using "=FLOOR.MATH(B1)". Finally, in column D, put the data into hexidecimal using "=DEC2HEX(C1,2)"
+      <br>
+      <img src=images/excel1.png alt="Excel table">
     </p>
-    <h4>Step 2</h4>
+    <h4>Step 4</h4>
     <p>
-      
+      Coppy column D and paste values only into a new sheet then export as Text (Tab delimited)(*.txt)<br>
+      <img src="images/saveAsText.png" alt="Save as text">
     </p>
-    <h4>Step 2</h4>
+    <h4>Step 5</h4>
     <p>
-      
+      Coppy the entire contents of this file to your notepad file that we started earlier. Now you should be almost done. If you've noticed, some of the numbers in the header are question marks. This needs to be resolved. 
     </p>
-    <h4>Step 2</h4>
+    <h4>Step 6</h4>
     <p>
-      
+      Go down to the bottom of your excel sheet and locate the last index value (mine is 8000), subtract 8 (7992), convert to hexidecimal (1F38), make it 8 digit (00001F38), seperate into groups of 2 (00 00 1F 38), then reverse the order (38 1F 00 00). This is the number you put in the second set of question marks. To get the number for the first set repeat but add 28 instead of subtract 8.
     </p>
-    <h4>Step 2</h4>
+    <h4>Step 7</h4>
     <p>
       
     </p>
