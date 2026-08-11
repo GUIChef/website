@@ -5,6 +5,9 @@ function txtToWav() {
   reader.addEventListener('load', (unpack) => {//something something something
     const contents = unpack.target.result;//This stores the file in a variable
     let hex = contents.trim().split(/\s+/);//This creates a new variabe from the contents after seperating by whitespaces
-    console.log(hex);// Remove later
+    let dec = hex.map(value => parseInt(value, 16));//Chat gpt said this would convert the strings to integer values then to raw data.
+    let bytes = new Uint8Array(dec);//This converts the individual pieces to raw data.
+    console.log(dec);
+    console.log(bytes);
   })
 }
