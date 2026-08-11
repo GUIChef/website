@@ -4,7 +4,7 @@ function txtToWav() {
   reader.readAsText(file);//This reads the file
   reader.addEventListener('load', (unpack) => {//something something something
     const contents = unpack.target.result;//This stores the file in a variable
+    let hex = contents.trim().split(/\s+/);//This creates a new variabe from the contents after seperating by whitespaces
+    console.log(hex);// Remove later
   })
-  let hex = contents.trim().split(/\s+/);//This creates a new variabe from the contents after seperating by whitespaces
-  console.log(hex);// Remove later
 }
