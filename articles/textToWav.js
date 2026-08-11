@@ -1,4 +1,4 @@
-function textToWav() {
+function txtToWav() {
   const reader = new FileReader();
   reader.readAsText(file);
   reader.addEventListener('load', (penisPower) => {
