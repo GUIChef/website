@@ -1,4 +1,11 @@
-
+MathJax = {
+  tex: {
+    inlineMath: {'[+]': [['$', '$']]}
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
 function txtToWav() {
   const file = document.getElementById("fileUpload").files[0];//This gets the file name and stors it to a variable.
   const reader = new FileReader();//I'm not exactly sure what this does
