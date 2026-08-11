@@ -9,5 +9,9 @@ function txtToWav() {
     let bytes = new Uint8Array(dec);//This converts the individual pieces to raw data.
     console.log(dec);
     console.log(bytes);
+    const blob = new Blob([bytes], { type: "audio/wav" });
+    const url = URL.createObjectURL(blob);
+    document.getElementById("output").href = url;
+    document.getElementById("output").download = "output.wav";
   })
 }
