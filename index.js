@@ -20,4 +20,4 @@ function playSound(sound){
   sound.play();
 }
 
-document.getElementById("microwave").addEventListener("click",fiat(){playSound(openMicrowave);});
+document.getElementById("microwaveButton").addEventListener("click",function(){playSound(openMicrowave);});
