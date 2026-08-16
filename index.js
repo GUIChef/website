@@ -1,3 +1,5 @@
+const openMicrowave = new Audio("sounds/open.wav");
+
 function microwaveOpen(){
   document.getElementById("microwave").src="images/microwaveOpen.png"
   document.getElementById("microwave").title="This is an open microwave."
@@ -12,3 +14,10 @@ function microwaveClose(){
   document.getElementById("microwaveOpen").id="microwave"
   document.getElementById("microwaveButton").onclick=microwaveOpen
 }
+
+function playSound(sound){
+  sound.currentTime=0;
+  sound.play();
+}
+
+document.getElementById("microwave").addEventListener("click",fiat(){playSound(openMicrowave);});
