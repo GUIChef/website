@@ -22,4 +22,4 @@ function playSound(sound){
 
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("microwaveButton").addEventListener("click",function(){playSound(openMicrowave);});
-};
+});
