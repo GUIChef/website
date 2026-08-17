@@ -1,4 +1,5 @@
 const openMicrowave = new Audio("sounds/openMicrowave.wav");
+const closeMicrowave = new Audio("sounds/closeMicrowave.wav");
 
 function microwaveOpen(){
 	document.getElementById("microwave").src="images/microwaveOpen.png"
