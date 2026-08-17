@@ -1,6 +1,6 @@
 [
   {
-    "name":"Mathematics", "children": [
+    "name":"Mathematics", "children":[
       {"name":"Notes", "children":[
         {"name":"Algebra", "children":[
           {"name":"Quadratic Formula Uses and Derivation", "link":"quadraticFormulaUsesAndDerivation.html"}
@@ -28,15 +28,15 @@
 
   
   {
-    "name":"Science", "children": [
+    "name":"Science", "children":[
       
     ]
   },
 
   
   {
-    "name":"Computers", "children": [
-      {"name":"Sound", "children"[
+    "name":"Computers", "children":[
+      {"name":"Sound", "children":[
         {"name":"How to Create Sound from Scratch", "link":"howToCreateSoundFromScratch.html"}
       ]}
     ]
@@ -44,21 +44,21 @@
 
   
   {
-    "name":"Bible", "children": [
+    "name":"Bible", "children":[
       
     ]
   },
 
   
   {
-    "name":"Creative", "children": [
+    "name":"Creative", "children":[
       
     ]
   },
 
   
   {
-    "name":"Spanish", "children": [
+    "name":"Spanish", "children":[
       
     ]
   }
