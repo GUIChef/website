@@ -45,7 +45,7 @@
   
   {
     "name":"Bible", "children":[
-      
+      {"name": "Bible gateway", "link":"https://www.biblegateway.com/"}
     ]
   },
 
@@ -61,5 +61,10 @@
     "name":"Spanish", "children":[
       
     ]
+  }
+
+
+  {
+    "name":"Main site", "link":"../index.html"
   }
 ]
