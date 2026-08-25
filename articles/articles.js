@@ -12,4 +12,7 @@ window.addEventListener('load', function () {//only after the page loads
                 }
             });
         });
+    document.getElementById("menu").addEventListener("click", function(vagina) {
+        alert(vagina.target.id)
+    });
 });
