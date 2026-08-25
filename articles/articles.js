@@ -26,7 +26,7 @@ window.addEventListener('load', function () {//only after the page loads
                             document.getElementById("menu").innerHTML += "<li><a href=\"" + clit.link + "\">" + clit.name + "</a></li>";
                         });                
                     }
-                }
+                });
             });
         });
 });
