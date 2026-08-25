@@ -1,25 +1,25 @@
 [
   {
-    "name":"Mathematics", "children":[
-      {"name":"Notes", "children":[
-        {"name":"Algebra", "children":[
-          {"name":"Quadratic Formula Uses and Derivation", "link":"quadraticFormulaUsesAndDerivation.html"}
+    "name":"Mathematics", "id":"math", "children":[
+      {"name":"Notes", "id":"mathNotes", "children":[
+        {"name":"Algebra", "id":"mathNotesAlgebra", "children":[
+          {"name":"Quadratic Formula Uses and Derivation", "id":"qFormulaUses", "link":"quadraticFormulaUsesAndDerivation.html"}
         ]},
-        {"name":"Trigonometry", "children":[
+        {"name":"Trigonometry", "id":"mathNotesTrig", "children":[
           
         ]},
-        {"name":"Calculus", "children":[
+        {"name":"Calculus", "id":"mathNotesCalc", "children":[
           
         ]}
       ]},
-      {"name":"Tutorials", "children":[
-        {"name":"Algebra", "children":[
+      {"name":"Tutorials", "id":"mathTutorials", "children":[
+        {"name":"Algebra", "id":"mathTurorialsAlgebra", "children":[
           
         ]},
-        {"name":"Trigonometry", "children":[
+        {"name":"Trigonometry", "id":"mathTutorialsTrig", "children":[
           
         ]},
-        {"name":"Calculus", "children":[
+        {"name":"Calculus", "id":"mathTutorialsCalc", "children":[
           
         ]}
       ]}
@@ -28,43 +28,43 @@
 
   
   {
-    "name":"Science", "children":[
+    "name":"Science", "id":"science", "children":[
       
     ]
   },
 
   
   {
-    "name":"Computers", "children":[
-      {"name":"Sound", "children":[
-        {"name":"How to Create Sound from Scratch", "link":"howToCreateSoundFromScratch.html"}
+    "name":"Computers", "id":"computers", "children":[
+      {"name":"Sound", "id":"computersSound", "children":[
+        {"name":"How to Create Sound from Scratch", "id":"howToCreateSoundFromScratch", "link":"howToCreateSoundFromScratch.html"}
       ]}
     ]
   },
 
   
   {
-    "name":"Bible", "children":[
-      {"name": "Bible gateway", "link":"https://www.biblegateway.com/"}
+    "name":"Bible", "id":"bible", "children":[
+      {"name": "Bible gateway", "id":"bibleGateway", "link":"https://www.biblegateway.com/"}
     ]
   },
 
   
   {
-    "name":"Creative", "children":[
+    "name":"Creative", "id":"creative", "children":[
       
     ]
   },
 
   
   {
-    "name":"Spanish", "children":[
+    "name":"Spanish", "id":"spanish", "children":[
       
     ]
   },
 
 
   {
-    "name":"Main site", "link":"../index.html"
+    "name":"Main site", "id":"mainSite", "link":"../index.html"
   }
 ]
