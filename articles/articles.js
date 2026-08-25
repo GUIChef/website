@@ -14,7 +14,7 @@ window.addEventListener('load', function () {//only after the page loads
             document.getElementById("menu").addEventListener("click", function(vagina) {
                 //alert(vagina.target.id);
                 alert(data);
+                vagina.target.innerHTML+="<ul id=\""+vagina.target.id+"Contents\"><li>test1</li><li>test2</li></ul>";
             });
         });
-        
 });
