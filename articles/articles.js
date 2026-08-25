@@ -20,11 +20,11 @@ window.addEventListener('load', function () {//only after the page loads
                     if (item.children) {
                         item.children.forEach(function(clit) {
                             document.getElementById(vagina.target.id+"Contents").innerHTML += "<li id=\""+clit.id+"\">" + clit.name + "</li>";
-                        }
+                        });
                     } else if (item.link) {
                         item.children.forEach(function(clit) {
                             document.getElementById("menu").innerHTML += "<li><a href=\"" + clit.link + "\">" + clit.name + "</a></li>";
-                        }                
+                        });                
                     }
                 }
             });
