@@ -11,8 +11,10 @@ window.addEventListener('load', function () {//only after the page loads
                     document.getElementById("menu").innerHTML += "<li><a href=\"" + item.link + "\">" + item.name + "</a></li>";//make 'link' the href and 'name' the shown text.
                 }
             });
+            document.getElementById("menu").addEventListener("click", function(vagina) {
+                //alert(vagina.target.id);
+                alert(data);
+            });
         });
-    document.getElementById("menu").addEventListener("click", function(vagina) {
-        alert(vagina.target.id)
-    });
+        
 });
