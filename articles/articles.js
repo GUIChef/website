@@ -16,11 +16,16 @@ window.addEventListener('load', function () {//only after the page loads
                 var clickedItemId = data.find(function(item) {
                     return item.id === vagina.target.id;
                 });
-                clickedItemId.forEach(function(item) {//repeat for every item
-                if (item.children) {//if it contains 'children'
-                    document.getElementById("menu").innerHTML += "<li id=\""+item.id+"\">" + item.name + "</li>";//only print the top level
-                } else if (item.link) {//or if it contains a link
-                    document.getElementById("menu").innerHTML += "<li><a href=\"" + item.link + "\">" + item.name + "</a></li>";//make 'link' the href and 'name' the shown text.
+                clickedItemId.forEach(function(item) {
+                    if (item.children) {
+                        item.children.forEach(function(clit) {
+                            document.getElementById(vagina.target.id+"Contents").innerHTML += "<li id=\""+clit.id+"\">" + clit.name + "</li>";
+                        }
+                    } else if (item.link) {
+                        item.children.forEach(function(clit) {
+                            document.getElementById("menu").innerHTML += "<li><a href=\"" + clit.link + "\">" + clit.name + "</a></li>";
+                        }                
+                    }
                 }
             });
         });
