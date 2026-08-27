@@ -11,20 +11,17 @@ window.addEventListener('load', function () {//only after the page loads
                     document.getElementById("menu").innerHTML += "<li><a href=\"" + item.link + "\">" + item.name + "</a></li>";//make 'link' the href and 'name' the shown text.
                 }
             });
-            document.getElementById("menu").addEventListener("click", function(vagina) {
-                vagina.target.innerHTML+="<ul id=\""+vagina.target.id+"Contents\"></ul>";
-                var clickedItemId = data.find(function(item) {
+            document.getElementById("menu").addEventListener("click", function(vagina) { // detects when anything in the menu is pressed
+                vagina.target.innerHTML+="<ul id=\""+vagina.target.id+"Contents\"></ul>";  //creates an empty unordered list with a similar id  target --> targetContents
+                var clickedItem = data.find(function(item) { //stores a variable of the clicked item
                     return item.id === vagina.target.id;
                 });
-                clickedItemId.forEach(function(item) {
-                    if (item.children) {
-                        item.children.forEach(function(clit) {
-                            document.getElementById(vagina.target.id+"Contents").innerHTML += "<li id=\""+clit.id+"\">" + clit.name + "</li>";
-                        });
-                    } else if (item.link) {
-                        item.children.forEach(function(clit) {
-                            document.getElementById("menu").innerHTML += "<li><a href=\"" + clit.link + "\">" + clit.name + "</a></li>";
-                        });                
+                var clickedItemId = clickedItem.id
+                clickedItem.children.forEach(function(item) { //run a for loop for each item in the clicked thingy
+                    if (item.children) {     //run this if the item itself has more children
+                        document.getElementById(clickedItemId+"Contents").innerHTML += "<li id=\""+item.id+"\">" + item.name + "</li>";//add the item into the new unordered list but only the top level name
+                    } else if (item.link) {//run this if the item does not itself have children but instead is a link
+                        document.getElementById(clickedItemId+"Contents").innerHTML += "<li><a href=\"" + item.link + "\">" + item.name + "</a></li>";//add the item into the new unordered list
                     }
                 });
             });
