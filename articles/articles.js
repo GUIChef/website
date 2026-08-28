@@ -13,7 +13,6 @@ window.addEventListener('load', function () {//only after the page loads
             });
             document.getElementById("menu").addEventListener("click", function(vagina) { // detects when anything in the menu is pressed
                 vagina.target.innerHTML+="<ul id=\""+vagina.target.id+"Contents\"></ul>";  //creates an empty unordered list with a similar id  target --> targetContents
-                document.getelementById(vagina.target.id).id = "clit" //prevent it from being clicked again. I <3 clitoris (:
                 var clickedItem = data.find(function(item) { //stores a variable of the clicked item
                     return item.id === vagina.target.id;
                 });
@@ -25,6 +24,7 @@ window.addEventListener('load', function () {//only after the page loads
                         document.getElementById(clickedItemId+"Contents").innerHTML += "<li><a href=\"" + item.link + "\">" + item.name + "</a></li>";//add the item into the new unordered list
                     }
                 });
+                document.getelementById(vagina.target.id).id = "clit" //prevent it from being clicked again. I <3 clitoris (:
             });
         });
 });
