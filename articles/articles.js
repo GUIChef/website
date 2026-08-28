@@ -13,6 +13,7 @@ window.addEventListener('load', function () {//only after the page loads
             });
             document.getElementById("menu").addEventListener("click", function(vagina) { // detects when anything in the menu is pressed
                 vagina.target.innerHTML+="<ul id=\""+vagina.target.id+"Contents\"></ul>";  //creates an empty unordered list with a similar id  target --> targetContents
+                document.getelementById(vagina.target.id).id = "clit"
                 var clickedItem = data.find(function(item) { //stores a variable of the clicked item
                     return item.id === vagina.target.id;
                 });
