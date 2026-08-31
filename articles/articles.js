@@ -1,3 +1,22 @@
+function findItem(items, id) {//recursive search function from le chat gpt
+    for (var i = 0; i < items.length; i++) {
+        if (items[i].id === id) {
+            return items[i];
+        }
+        if (items[i].children) {
+            var found = findItem(items[i].children, id);
+            if (found) {
+                return found;
+            }
+        }
+    }
+    return null;
+}
+
+
+
+
+
 window.addEventListener('load', function () {//only after the page loads
     fetch("articles.json")//get Jason!
         .then(function(penis) {//make it js readable
@@ -13,9 +32,7 @@ window.addEventListener('load', function () {//only after the page loads
             });
             document.getElementById("menu").addEventListener("click", function(vagina) { // detects when anything in the menu is pressed
                 vagina.target.innerHTML+="<ul id=\""+vagina.target.id+"Contents\"></ul>";  //creates an empty unordered list with a similar id  target --> targetContents
-                var clickedItem = data.find(function(item) { //stores a variable of the clicked item
-                    return item.id === vagina.target.id;
-                });
+                var clickedItem = findItem(data, vagina.target.id);// Find it!
                 var clickedItemId = clickedItem.id
                 clickedItem.children.forEach(function(item) { //run a for loop for each item in the clicked thingy
                     if (item.children) {     //run this if the item itself has more children
