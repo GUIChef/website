@@ -3,7 +3,7 @@
     "name":"Mathematics", "id":"math", "children":[
       {"name":"Notes", "id":"mathNotes", "children":[
         {"name":"Algebra", "id":"mathNotesAlgebra", "children":[
-          {"name":"Quadratic Formula Uses and Derivation", "id":"qFormulaUses", "link":"quadraticFormulaUsesAndDerivation.html"}
+      
         ]},
         {"name":"Trigonometry", "id":"mathNotesTrig", "children":[
           
