@@ -15,7 +15,25 @@
     <h3>This is page 7</h3>
     <h4><a href="page5s.html" title="Return to previous page."><--</a></h4>
     <p>
-      You've got it!
+      You've got it! Only whe correct password will get you through this one. Good luck.
     </p>
+    <form id="form">
+      <label for="password">Password:</label><br>
+      <input type="text" id="pass" name="password" value="Type it in"><br>
+      <input type="submit" value="Submit">
+    </form>
+    <a href="" id="nextLink">Click here once you have the correct password.</a>
+    <script>
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const password = document.querySelector("#password").value;\
+        const encodedUrl = {};
+        const key = await crypto.subtle.deriveKey(password);
+        var decrypted = await crypto.subtle.decrypt({name:"AES-GCM", iv:iv}, key, encodedUrl);
+        const url = new TextDecoder().decode(decrypted);
+        document.getElementById("nextLink").href = url;
+      });
+
+    </script>
   </body>
 </html>
