@@ -19,21 +19,27 @@
     </p>
     <form id="form">
       <label for="password">Password:</label><br>
-      <input type="text" id="pass" name="password" value="Type it in"><br>
+      <input type="text" id="password" name="password" placeholder="Type it in"><br>
       <input type="submit" value="Submit">
     </form>
     <a href="" id="nextLink">Click here once you have the correct password.</a>
     <script>
       form.addEventListener("submit", async (event) => {
         event.preventDefault();
-        const password = document.querySelector("#password").value;\
-        const encodedUrl = {};
-        const key = await crypto.subtle.deriveKey(password);
-        var decrypted = await crypto.subtle.decrypt({name:"AES-GCM", iv:iv}, key, encodedUrl);
+        const password = document.querySelector("#password").value;
+        const encryptedUrlBase64 = "075QQpOjLGsfAZ9IjwzMcL8c/n1o3Y09w6+Mbzsd//0v";
+        const encryptedUrl = Uint8Array.from(
+          atob(encryptedUrlBase64),
+          character => character.charCodeAt(0)
+        );
+        const iv = new Uint8Array([19,  43,  29,  71, 138, 9, 124, 173, 185, 4, 35, 180]);
+        const key = new TextEncoder().encode(password);
+        const keyBytes = await crypto.subtle.digest("SHA-256", key);
+        const cryptoKey = await crypto.subtle.importKey("raw", keyBytes, { name: "AES-GCM" }, false, ["decrypt"]);
+        var decrypted = await crypto.subtle.decrypt({name:"AES-GCM", iv:iv}, cryptoKey, encryptedUrl);
         const url = new TextDecoder().decode(decrypted);
         document.getElementById("nextLink").href = url;
       });
-
     </script>
   </body>
 </html>
