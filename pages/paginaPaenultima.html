@@ -28,12 +28,12 @@
       form.addEventListener("submit", async (event) => {
         event.preventDefault();
         const password = document.querySelector("#password").files[0];
-        const encryptedUrlBase64 = "mNz88KqoSKrM4GQcxmVuN4DkU01EDsdpIR/TI9SCvPlzVQ50npGjeJlxT/Gm";
+        const encryptedUrlBase64 = "h3jt55z2t79VaJCkl8bXYGMmIETUzPV58c77Wr3MJ0E3";
         const encryptedUrl = Uint8Array.from(
           atob(encryptedUrlBase64),
           character => character.charCodeAt(0)
         );
-        const iv = new Uint8Array([111, 151, 10, 38, 250, 181, 224, 161, 6, 3, 3, 144]);
+        const iv = new Uint8Array([238, 182, 170, 100, 50, 83, 140, 179, 56, 162, 252, 146]);
         const key = await password.arrayBuffer();
         const keyBytes = await crypto.subtle.digest("SHA-256", key);
         const cryptoKey = await crypto.subtle.importKey("raw", keyBytes, { name: "AES-GCM" }, false, ["decrypt"]);
