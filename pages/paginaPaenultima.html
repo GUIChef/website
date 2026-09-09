@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Randall's Website</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="stylesheet" href="../style.css">
+    <meta name="description" content="Pagina septima">
+    <meta name="author" content="GUIChef">
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+    <h1>Welcome to my Website!</h1>
+    <hr>
+    <h3>This is page 7</h3>
+    <h4><a href="page5s.html" title="Return to previous page."><--</a></h4>
+    <p>
+      That wasn't so bad. Only the correct password will get you through this one. Good luck. No spaces, camelCase
+      <blockquote>Through thick and thin and to the end,<br>
+      Make two as one, their difference mend<br>
+      Though all the while my body bend<br>
+      If I be proper, none shall rend.<br>
+      Who am I?</blockquote>
+    </p>
+    <form id="form">
+      <label for="password">Password:</label><br>
+      <input type="text" id="password" name="password" placeholder="Type it in"><br>
+      <input type="submit" value="Submit">
+    </form>
+    <a href="" id="nextLink">Click here once you have the correct password.</a>
+    <script>
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const password = document.querySelector("#password").value;
+        const encryptedUrlBase64 = "Ppu3nGJORcgPWAjKZGdGS/Zg5w2qhjTwwkNwvl+Pquxe7qiB+A==";
+        const encryptedUrl = Uint8Array.from(
+          atob(encryptedUrlBase64),
+          character => character.charCodeAt(0)
+        );
+        const iv = new Uint8Array([71, 75, 33, 223, 226, 15, 240, 190, 103, 189, 153, 206]);
+        const key = new TextEncoder().encode(password);
+        const keyBytes = await crypto.subtle.digest("SHA-256", key);
+        const cryptoKey = await crypto.subtle.importKey("raw", keyBytes, { name: "AES-GCM" }, false, ["decrypt"]);
+        var decrypted = await crypto.subtle.decrypt({name:"AES-GCM", iv:iv}, cryptoKey, encryptedUrl);
+        const url = new TextDecoder().decode(decrypted);
+        document.getElementById("nextLink").href = url;
+      });
+    </script>
+  </body>
+</html>
